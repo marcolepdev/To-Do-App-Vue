@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+
+    <script src="./main.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="main-title">
+            <h1>My Todo App</h1>
+        </div>
+        <section id="app" v-cloak>
+<div id="todo-done-container">
+    <div id="tasks-to-do">
+        <div id="tasks-to-do-par">Tasks to do: {{ taskCount }}</div>
+    </div>
+</div>
+<div id="input-container">
+    <input v-model="addedTask" v-on:keyup.enter="addTask" v-on:input="maxLengthInput" maxlength="40" type="text" placeholder="What's your next task?" autofocus>
+<button @click="taskEnter" id="add-task">+</button>
+</div>
+<div v-if="warningText" id="warn-paragraph">
+    <p id="warn-text">{{ warningText }}</p>
+</div>
+<div v-for="(task, index) in tasks">
+    <ul>
+        <li>{{index + 1}}° Task - {{ task }}</li>
+        <button id="delete-button" @click="removeTask">Remove</button>        
+    </ul>
+</div>
+
+
+
+
+
+
+        </section>
+      </div>
+</body>
+</html>

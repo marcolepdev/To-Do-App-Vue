@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body{
+    background-color: #292938;
+  }
+  *{
+    font-family: Roboto;
+    letter-spacing: 0.1rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #main-container{
+  width:800px;
+  height:600px;
+    margin: 0 auto;
+    position: relative;
+    top:50px;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+  }
+  
+  
+  h1{
+    width:250px;
+    height:60px;
+    position: relative;
+    top:20px;
+    color:#fff;
+    margin: 0 auto;
+    text-align: center;
+  
+  }
+  #todo-done-container{
+  position: relative;
+  top:20px;
+  width:400px;
+  height:150px;
+  margin: 0 auto;
+  border:2px solid #7a7162;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  }
+
+  #done{
+    color: #fff;
+    text-align: center;
+  }
+  
+  #input-container{
+    width:310px;
+    height:50px;
+    position: relative;
+    top:50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border:1px solid transparent;
+    justify-content:space-between;
+  
+  }
+  
+  input{
+    width:230px;
+    height:30px;
+    margin: 0 auto;
+    padding-left:20px;
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(52, 49, 49);
+    color:#fff;
+   
+  }
+  input::placeholder{
+    color:#fff;
+  }
+
+  input:focus{
+    outline:0;
+  }
+#warn-paragraph{
+  position: relative;
+  top:40px;
+}
+  #warn-text{
+    color:#fff;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  
+  #add-task{
+    width:30px;
+    height:30px;
+    background-color: rgb(52, 49, 49);
+    border:none;
+    color:rgb(152, 145, 145);
+    border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;  
+  }
+  #add-task:hover{
+background-color: #fff;
+color:#000;
+cursor: pointer;
+  }
+  ul{
+    
+    margin:0 auto;
+    margin-bottom: 8px;
+    position: relative;
+    
+    background-color: #323242;
+    top:60px;
+    text-align: center;
+    width:295px;
+    list-style-type: none;
+    overflow-y: auto;
+    border:1px solid #fff;
+    border-radius: 12px;
+    
+  }
+
+  li{
+      color:white;
+      padding:5px;
+      border-radius: 10px;
+      margin-top:5px;
+      width:280px;
+      overflow-y: auto;
+      overflow-wrap: break-word;
+  }
+
+  #delete-button{
+    border:#fff 1px solid;
+    
+    background-color: #323242;
+    color:#fff;
+    border-radius: 15px;
+    width:100px;
+    padding:5px;
+    margin: 8px;
+    cursor: pointer;
+  }
+
+  #delete-button:hover{
+    background-color: #fff;
+    color:#323242;
+    border:1px solid #fff;
+  }
+  
+  ::-webkit-scrollbar {
+    width:5px;
+    background-color: rgb(70, 65, 65);
+  }
+  
+
+
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(208, 195, 195);
+    border-radius: 15px;
+    width: 2px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(96, 91, 91);
+    border-radius: 15px;
+    width:2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(57, 56, 56);
+  }
+
+
+  #tasks-to-do{
+    width:200px;
+    height:60px;
+    margin: 0 auto;
+    position: relative;
+    top:10px;
+  }
+
+  #tasks-to-do-par{
+    color: #fff;
+    text-align: center;
+  }
+
+  .completed{
+    background-color:blue
+  }
+
+  @media only screen and (max-width:500px){
+
+    *{
+        font-family: Roboto;
+    }
+    #main-container{
+        width:250px;
+        height:180px;
+          margin: 0 auto;   
+          position: relative;
+          top:50px;
+          display: flex;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          flex-direction: column;
+        }
+
+        #main-title{
+            width:145px;
+            margin: 0 auto;
+            font-size: 10px;
+            position: relative;
+            top:10px;
+            text-align: center;
+            color:#fff;
+
+        }
+
+        #todo-done-container{
+            width:190px;
+            height: 120px;
+            text-align: center;
+            border:none;
+
+        }
+
+        #tasks-to-do{
+            position: relative;
+            top:10px;
+            width:180px;
+            height:100px;
+
+        }
+
+        #tasks-to-do-par{
+            width:190px;
+            
+        }
+
+        #input-container{
+        width:220px;
+        margin: 0 auto;
+        display: flex;
+        }
+        input{
+            margin: 0 auto;
+            text-align: left;
+        }
+        #add-task{
+            display: none;
+        }
+        #delete-button{
+            position: relative;
+            top:2px;
+            padding: 5px;
+            width:100px;
+            margin: 10px;
+            font-size: 13px;
+        }
+
+        #warn-paragraph{
+            width:280px;
+            text-align: center;
+        }
+        #warn-text{
+            color:#fff;
+            text-align: center;
+        }
+        ul{
+            width:250px;
+
+        }
+        li{
+            text-align: center;
+            padding: 6px;
+            width:190px;
+            margin: 0 auto;
+            margin-top:10px;
+            font-size: 14px;
+
+ 
+        }
+    }
+  
