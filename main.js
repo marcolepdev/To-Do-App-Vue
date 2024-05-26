@@ -36,7 +36,7 @@ const app = Vue.createApp({
 
         },
         maxLengthInput(event) {
-            if (event.target.value.length === this.maxLength) {
+            if (event.target.value.length > this.maxLength) {
                 this.warningText = 'text is too long';
                 this.event.target.value.slice(0, this.maxLength);
                 
