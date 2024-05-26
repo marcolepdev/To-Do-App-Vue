@@ -9,6 +9,7 @@ const app = Vue.createApp({
 
         }
     },
+    
     computed: {
         taskCount() {
             return this.tasks.length;
@@ -67,6 +68,9 @@ const app = Vue.createApp({
         removeTask(index) {
             this.tasks.splice(index, 1);
         }
+    },
+    mounted(){
+        document.getElementById('app').classList.remove('hidden'); 
     }
 }
 );

@@ -5,6 +5,11 @@
 body{
     background-color: #292938;
   }
+
+  .hidden{
+    display: none;
+  }
+
   *{
     font-family: Roboto;
     letter-spacing: 0.1rem;
