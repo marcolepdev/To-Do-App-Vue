@@ -3,16 +3,25 @@ const app = Vue.createApp({
         return {
             el: '#app',
             addedTask: '',
-            tasks: [],
+            tasksToDo: [],
             warningText: '',
-            maxLength: 40
+            maxLength: 40,
+            completedTask: [],
+            CompleteButton: 'Completed',
+            allTasksGen:[]
 
         }
     },
-    
+
     computed: {
         taskCount() {
-            return this.tasks.length;
+            return this.tasksToDo.length;
+        },
+        completeTaskLength() {
+            return this.completedTask.length;
+        },
+        allTasksCount(){
+            return this.allTasks = this.completedTask.length + this.tasksToDo.length;
         }
     },
     methods: {
@@ -22,27 +31,28 @@ const app = Vue.createApp({
 
             if (this.addedTask === '') {
                 this.warningText = 'Field is empty, please type something...';
-            } else {
-                if (whiteSpaces && whiteSpaces[0].length >= 1) {
+
+            } else if (whiteSpaces && whiteSpaces[0].length >= 1) {
                     this.warningText = 'No white spaces allowed at the beginning. Please try again';
                     this.addedTask = '';
                 } else {
-                    this.tasks.push(trimmedText);
+                    this.tasksToDo.push(trimmedText);
+                    this.allTasksGen.push(trimmedText);
                     this.addedTask = '';
                     this.warningText = ''
 
                 }
 
-            }
+            
 
         },
         maxLengthInput(event) {
             if (event.target.value.length > this.maxLength) {
                 this.warningText = 'text is too long';
                 event.target.value = event.target.value.slice(0, this.maxLength);
-                
-            }else{
-                this.warningText=''
+
+            } else {
+                this.warningText = ''
             }
         },
         taskEnter() {
@@ -52,25 +62,33 @@ const app = Vue.createApp({
             if (this.addedTask === '') {
                 this.warningText = 'Field is empty, please type something...';
 
-            } else {
-                if (whiteSpaces && whiteSpaces[0].length > 1) {
+            } else if (whiteSpaces && whiteSpaces[0].length > 1) {
                     this.warningText = 'too many white spaces at the beginning. Please type a proper word';
                     this.addedTask = '';
                 } else {
-                    this.tasks.push(trimmedText);
+                    this.tasksToDo.push(trimmedText);
                     this.addedTask = '';
                     this.warningText = ''
                 }
 
             }
 
-        },
+        ,
         removeTask(index) {
-            this.tasks.splice(index, 1);
-        }
+            const task = this.tasksToDo.splice(index, 1)[0];
+            this.allTasks = this.allTasks.filter(t =>t!== task);
+        },
+        addCompleted(index) {
+            //  this.completedTask.push(this.task);
+            const task = this.tasksToDo.splice(index, 1)[0];
+            this.completedTask.push(task);
+                
+
+            }
+        
     },
-    mounted(){
-        document.getElementById('app').classList.remove('hidden'); 
+    mounted() {
+        document.getElementById('app').classList.remove('hidden');
     }
 }
 );

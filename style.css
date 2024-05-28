@@ -33,24 +33,26 @@ body{
   h1{
     width:250px;
     height:60px;
-    position: relative;
-    top:20px;
     color:#fff;
     margin: 0 auto;
     text-align: center;
   
   }
   #todo-done-container{
-  position: relative;
-  top:20px;
+
   width:400px;
-  height:150px;
+  height:100px;
   margin: 0 auto;
   border:2px solid #7a7162;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  }
+
+  #tasks-to-do{
+
+    height:90px !important;
   }
 
   #done{
@@ -97,6 +99,9 @@ body{
     color:#fff;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    top:13px;
+    padding:15px;
     
   }
   
@@ -144,8 +149,7 @@ cursor: pointer;
   }
 
   #delete-button{
-    border:#fff 1px solid;
-    
+    border:#fff 1px solid;    
     background-color: #323242;
     color:#fff;
     border-radius: 15px;
@@ -155,17 +159,34 @@ cursor: pointer;
     cursor: pointer;
   }
 
-  #delete-button:hover{
+  #delete-button:hover, #completed:hover{
     background-color: #fff;
     color:#323242;
     border:1px solid #fff;
   }
+
+  #completed{    
+    border:#fff 1px solid;
+    background-color: #323242;
+    color:#fff;
+    border:#fff 1px solid;  
+    border-radius: 15px;
+    width:140px;
+    padding:5px;
+    cursor: pointer;
+  }
+
+  #tasks-to-be-done-par{
+    
+      color: #fff;
+      text-align: center;
+      width:230px;
+    }
   
   ::-webkit-scrollbar {
     width:5px;
     background-color: rgb(70, 65, 65);
   }
-  
 
 
   

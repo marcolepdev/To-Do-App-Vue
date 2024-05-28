@@ -19,7 +19,10 @@
         
 <div id="todo-done-container">
     <div id="tasks-to-do">
-        <div id="tasks-to-do-par">Tasks to do: {{ taskCount }}</div>
+        <h3 id="tasks-to-do-par">All Tasks: {{ allTasksCount }}</h3>
+        <h3 id="tasks-to-do-par">Tasks To Do: {{ taskCount }}</h3>
+        <h3 id="tasks-to-be-done-par">Tasks completed: {{ completeTaskLength }}</h3>
+        
     </div>
 </div>
 <div id="input-container">
@@ -29,10 +32,11 @@
 <div v-if="warningText" id="warn-paragraph">
     <p id="warn-text">{{ warningText }}</p>
 </div>
-<div v-for="(task, index) in tasks">
+<div v-for="(task, index) in tasksToDo">
     <ul>
-        <li>{{index + 1}}° Task - {{ task }}</li>
-        <button id="delete-button" @click="removeTask">Remove</button>        
+        <li :key="index">{{index + 1}}° Task - {{ task }}</li>
+        <button id="delete-button" @click="removeTask">Remove</button>
+        <button  id="completed" @click="addCompleted(index)"> Complete</button>     
     </ul>
 </div>
 
