@@ -263,7 +263,7 @@ cursor: pointer;
         }
 
         #todo-done-container{
-            width:190px;
+            width:250px;
             height: 100px;
             text-align: center;
             position: relative;
@@ -275,13 +275,13 @@ cursor: pointer;
         #tasks-to-do{
             position: relative;
             top:10px;
-            width:180px;
+            width:220px;
             height:100px;
           
         }
 
         #tasks-to-do-par{
-            width:190px;
+            width:220px;
   border:none;          
         }
 
@@ -330,6 +330,10 @@ cursor: pointer;
             font-size: 14px;
 
         
+        }
+
+        #completed{
+          margin-bottom: 9px;
         }
     }
   
