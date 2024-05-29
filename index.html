@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My ToDo App</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
 
     <script src="./main.js" defer></script>
@@ -12,6 +12,7 @@
 </head>
 <body>
     <section id="app" class="hidden" v-cloak>
+        
     <div id="main-container">
         <div id="main-title">
             <h1>My Todo App</h1>
@@ -19,9 +20,10 @@
         
 <div id="todo-done-container">
     <div id="tasks-to-do">
-        <h3 id="tasks-to-do-par">All Tasks: {{ allTasksCount }}</h3>
-        <h3 id="tasks-to-do-par">Tasks To Do: {{ taskCount }}</h3>
-        <h3 id="tasks-to-be-done-par">Tasks completed: {{ completeTaskLength }}</h3>
+        <h3 class="tasks-counter" id="tasks-counter-all">All tasks: {{ allTasksCount }}</h3>
+        <h3 class="tasks-counter" id="tasks-counter-todo">Tasks to do: {{ taskCount }}</h3>
+        <h3 class="tasks-counter" id="tasks-counter-compl">Tasks completed: {{ completeTaskLength }}</h3>
+        <h3 class="tasks-counter" id="tasks-counter-remov">Tasks removed: {{ tasksRemovedCount }}</h3>
         
     </div>
 </div>
