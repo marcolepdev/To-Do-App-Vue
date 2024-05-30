@@ -44,40 +44,37 @@ h1 {
   border-bottom-right-radius: 24px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-
 }
 
 #tasks-to-do {
- height:135px !important;
+  height: 135px !important;
 }
 
-.tasks-counter{
-color: #fff;
-width:260px;
+.tasks-counter {
+  color: #fff;
+  width: 260px;
 }
 
-#tasks-counter-all{
+#tasks-counter-all {
   margin-top: 3px;
 }
-#tasks-counter-todo{
+#tasks-counter-todo {
   margin-top: 7px;
 }
-#tasks-counter-compl{
+#tasks-counter-compl {
   margin-top: 7px;
-  
-width:260px;
-}
-#tasks-counter-remov{
-  margin-top: 7px;
-}
 
-
+  width: 260px;
+}
+#tasks-counter-remov {
+  margin-top: 7px;
+}
 
 #input-container {
   width: 310px;
   height: 50px;
   position: relative;
-  top: 50px;
+  top: 30px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -131,13 +128,18 @@ input:focus {
   color: #000;
   cursor: pointer;
 }
+
+#task-container {
+  position: relative;
+  top: 70px;
+  margin-bottom: 15px;
+}
+
 ul {
   margin: 0 auto;
   margin-bottom: 8px;
   position: relative;
-
-  background-color: #323242;
-  top: 90px;
+  top: 3px;
   text-align: center;
   width: 295px;
   list-style-type: none;
@@ -187,8 +189,6 @@ li {
   color: #639c3f;
   border: 1px solid #000;
 }
-
-
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -274,21 +274,24 @@ li {
     height: 100px;
   }
 
-
   #input-container {
     width: 220px;
     position: relative;
-    top:80px;
+    top: 65px;
     margin: 0 auto;
     display: flex;
   }
   input {
     margin: 0 auto;
     text-align: left;
-
   }
   #add-task {
     display: none;
+  }
+
+  #task-container {
+    position: relative;
+    top: 95px;
   }
   #delete-button {
     position: relative;
@@ -304,7 +307,7 @@ li {
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top:75px;
+    top: 75px;
     font-size: 12px;
   }
   #warn-text {
@@ -314,7 +317,7 @@ li {
   ul {
     width: 250px;
     position: relative;
-    top:130px;
+    top: 3px;
   }
   li {
     text-align: center;

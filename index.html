@@ -34,7 +34,7 @@
 <div v-if="warningText" id="warn-paragraph">
     <p id="warn-text">{{ warningText }}</p>
 </div>
-<div v-for="(task, index) in tasksToDo">
+<div id="task-container" v-for="(task, index) in tasksToDo">
     <ul>
         <li :key="index">{{index + 1}}° Task - {{ task }}</li>
         <button id="delete-button" @click="removeTask">Remove</button>
