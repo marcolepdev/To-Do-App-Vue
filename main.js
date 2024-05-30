@@ -37,7 +37,7 @@ const app = Vue.createApp({
                 this.warningText = 'Field is empty, please type something...';
 
             } else if (whiteSpaces && whiteSpaces[0].length >= 1) {
-                this.warningText = 'No white spaces allowed at the beginning. Please try again';
+                this.warningText = 'No white spaces allowed at the beginning';
                 this.addedTask = '';
             } else {
                 this.tasksToDo.push(trimmedText);
@@ -51,6 +51,7 @@ const app = Vue.createApp({
 
 
         },
+
         maxLengthInput(event) {
             if (event.target.value.length > this.maxLength) {
                 this.warningText = 'text is too long';

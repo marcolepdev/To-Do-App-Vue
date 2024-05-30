@@ -101,15 +101,15 @@ input:focus {
 }
 #warn-paragraph {
   position: relative;
-  top: 40px;
+  top: 30px;
 }
 #warn-text {
   color: #fff;
   margin: 0 auto;
   text-align: center;
   position: relative;
-  top: 25px;
-  padding: 15px;
+  height:5px;
+  padding-bottom: 15px;
 }
 
 #add-task {
@@ -307,7 +307,8 @@ li {
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 75px;
+    top: 85px;
+    height:50px;
     font-size: 12px;
   }
   #warn-text {
