@@ -97,6 +97,14 @@ const app = Vue.createApp({
 
 
         },
+        removeAllTasks(){
+           this.removedTasks.push(...this.tasksToDo);
+           this.tasksToDo = [];
+        },
+        completeAllTasks(){
+            this.completedTask.push(...this.tasksToDo);
+            this.tasksToDo =[];
+        }
     },
     mounted() {
         document.getElementById('app').classList.remove('hidden');

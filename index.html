@@ -31,6 +31,10 @@
     <input v-model="addedTask" v-on:keyup.enter="addTask" v-on:input="maxLengthInput" maxlength="40" type="text" placeholder="What's your next task?" autofocus>
 <button @click="taskEnter" id="add-task">+</button>
 </div>
+<div v-if="tasksToDo.length > 1" id="additional-buttons-container">
+<button @click="removeAllTasks" id="remove-all-tasks" class="additional-button">Remove all tasks</button>
+<button @click="completeAllTasks" id="complete-all-tasks" class="additional-button">Complete all tasks</button>
+</div>
 <div v-if="warningText" id="warn-paragraph">
     <p id="warn-text">{{ warningText }}</p>
 </div>
