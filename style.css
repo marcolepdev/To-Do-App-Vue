@@ -335,7 +335,7 @@ li {
   color:white;
   width:350px;
   position: relative;
-  top:120px;
+  top:130px;
   display: flex;
   display: -webkit-flex;
   margin: 0 auto;
@@ -395,7 +395,7 @@ li {
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 65px;
+    top: 60px;
     height: 50px;
     font-size: 12px;
   }
