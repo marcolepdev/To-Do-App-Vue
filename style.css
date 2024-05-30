@@ -335,7 +335,7 @@ li {
   color:white;
   width:350px;
   position: relative;
-  top:130px;
+  top:140px;
   display: flex;
   display: -webkit-flex;
   margin: 0 auto;
@@ -379,7 +379,7 @@ li {
 
   #task-container {
     position: relative;
-    top: 115px;
+    top: 135px;
   }
   #delete-button {
     position: relative;
@@ -395,7 +395,7 @@ li {
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 60px;
+    top: 75px;
     height: 50px;
     font-size: 12px;
   }
@@ -403,6 +403,7 @@ li {
     color: #fff;
     text-align: center;
   }
+
   ul {
     width: 250px;
     position: relative;
