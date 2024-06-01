@@ -163,7 +163,7 @@ li {
 #delete-button {
   border: #e91707 1px solid;
   background-color: #da4237;
-  color: #000;
+  color: #fff;
   border-radius: 15px;
   width: 100px;
   padding: 5px;
@@ -173,12 +173,12 @@ li {
 
 #delete-button:hover {
   background-color: #000;
-  color: #e91707;
+  color: #fff;
   border: 1px solid #000;
 }
 #completed {
   background-color: #639c3f;
-  color: #000;
+  color: #fff;
   border: #639c3f 1px solid;
   border-radius: 15px;
   width: 140px;
@@ -188,7 +188,7 @@ li {
 
 #completed:hover {
   background-color: #000;
-  color: #639c3f;
+  color: #fff;
   border: 1px solid #000;
 }
 
@@ -242,30 +242,31 @@ li {
 }
 
 #remove-all-tasks {
-  background-color: #e91707;
+  background-color: #da4237;
   border: red 1px solid;
-  color: #000;
+  color: #fff;
 }
 
 
 #complete-all-tasks{
   
   background-color: #639c3f;
-  color: #000;
+  color: #fff;
   border: #639c3f 1px solid;
+  cursor: pointer;
 }
 
 #complete-all-tasks:hover{
   
   background-color: #000;
-  color: #639c3f;
+  color: #fff;
   border: #000 1px solid;
 }
 
 #remove-all-tasks:hover {
   background-color: #000;
   border: #000 1px solid;
-  color: #e91707;
+  color: #fff;
   cursor: pointer;
 }
 
